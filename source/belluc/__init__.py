@@ -27,3 +27,17 @@ class FitsFile:
 		print("This file has {} HDUs.".format(num_hdus))		
 
 		self.closeFile()
+    
+    def checkRA(self):
+        self.openFile()
+        
+        self.ra = self.file[0].header["RA"]        
+        
+        self.closeFile()
+
+    def checkDec(self):
+        self.openFile()
+        
+        self.dec = self.file[0].header["DEC"]        
+        
+        self.closeFile() 
