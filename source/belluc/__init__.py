@@ -6,8 +6,8 @@ class FitsFile:
     def __init__(self, fname):
         self.fname = fname
         self.file = None
-        self.ra = None
-        self.dec = None
+        # self.ra = None
+        # self.dec = None
 
     def openFile(self):
         if self.file is None:
@@ -15,6 +15,9 @@ class FitsFile:
         else:
             return 0
 
+    def bla(self):
+        self._bla = 'Bella'
+        
     def closeFile(self):
         if self.file is None:
             return 0
@@ -30,6 +33,17 @@ class FitsFile:
 
         self.closeFile()
     
+    @property
+    def ra(self):
+        self.openFile()
+
+        if getattr(self, "_ra", None) is None:
+            self._ra = self.file[0].header["RA"]
+
+        self.closeFile()
+
+        return self._ra
+
     def checkRA(self):
         if self.ra is not None:
             return 0
