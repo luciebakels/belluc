@@ -1,2 +1,2 @@
-/home/luciebakels/Code/codingWorkshop2018/spectra/spec-10000-57346-0002.fits
-/home/luciebakels/Code/codingWorkshop2018/spectra/spec-4055-55359-0006.fits
+/data/spectra/spec-10000-57346-0002.fits
+/data/spectra/spec-4055-55359-0006.fits
